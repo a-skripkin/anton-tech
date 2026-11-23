@@ -12,6 +12,7 @@ anton-tech/
 ├── start.ps1               # запуск одной командой (npm ci при необходимости + браузер)
 ├── .nvmrc                  # версия Node для проекта (24)
 ├── .gitignore              # node_modules, dist, логи
+├── .gitattributes          # нормализация переводов строк (LF)
 ├── public/
 │   └── favicon.svg         # иконка-монограмма «A» с градиентом
 ├── src/
