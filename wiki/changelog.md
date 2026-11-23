@@ -11,6 +11,9 @@
 - `start.ps1` — запуск одной командой: проверка Node, `npm ci` при отсутствии `node_modules`, открытие браузера, Vite на 5173.
 - `.nvmrc` (Node 24) и `engines` в `package.json` (node ≥ 24, npm ≥ 11).
 - Страница вики [«Восстановление»](02-dev/recovery.md): сценарии, git-команды, внешняя копия, чек-лист.
+- GitHub CLI 2.105.0 (portable, `%LOCALAPPDATA%\Programs\gh`), авторизация device flow, аккаунт `a-skripkin`.
+- Приватный репозиторий <https://github.com/a-skripkin/anton-tech>, remote `origin`, ветка `main` запушена.
+- `http.sslBackend=schannel` — push работает за корпоративным прокси с самоподписанным сертификатом.
 
 ### Изменено
 

@@ -3,6 +3,7 @@
 Страница-визитка разработчика: одностраничный сайт на Vite + React + TypeScript.
 
 **Демо:** <http://localhost:5173/> (после `npm run dev`)
+**Репозиторий:** <https://github.com/a-skripkin/anton-tech> (private)
 
 ## Запуск
 

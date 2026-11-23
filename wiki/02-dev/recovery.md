@@ -33,8 +33,8 @@ npm run dev
 | Закрыл терминал | `.\start.ps1` — код и вики на месте |
 | Новая сессия с агентом | сказать «продолжай по вики»: он прочитает `wiki/README.md` и журнал |
 | Случайно удалил файлы | `git restore .` или `git checkout -- .` (если коммит был) |
-| Переустановка Windows / новый ПК | клонировать репозиторий, `npm ci`, `.\start.ps1` |
-| Пропала вся папка | нужна копия: git-remote, архив или облако |
+| Переустановка Windows / новый ПК | `git clone https://github.com/a-skripkin/anton-tech.git`, `npm ci`, `.\start.ps1` |
+| Пропала вся папка | клонировать из GitHub (репозиторий приватный, нужен вход `a-skripkin`) |
 
 ## Git
 
@@ -56,17 +56,64 @@ npm run dev
 
 ## Внешняя копия
 
-Локальный git защищает от случайных правок и удаления файлов, но не от потери диска. Для полной защиты нужен remote:
+Репозиторий создан и запушен:
+
+| Параметр | Значение |
+| --- | --- |
+| Remote | `origin` → <https://github.com/a-skripkin/anton-tech> |
+| Видимость | private |
+| Ветка | `main` (отслеживает `origin/main`) |
+| Аккаунт | `a-skripkin` |
+
+Обычный цикл:
 
 ```powershell
-# создать пустой репозиторий на GitHub, затем:
-git remote add origin https://github.com/<user>/anton-tech.git
-git push -u origin main
+git add -A
+git commit -m "описание изменений"
+git push
 ```
 
-`gh` CLI на машине не установлен — создать репозиторий можно через веб-интерфейс GitHub.
+Восстановление на другой машине:
 
-Альтернатива без GitHub: архив папки (без `node_modules`) на внешний диск или в облако.
+```powershell
+git clone https://github.com/a-skripkin/anton-tech.git
+cd anton-tech
+npm ci
+.\start.ps1
+```
+
+## GitHub CLI
+
+`gh` установлен portable, без прав администратора:
+
+| Параметр | Значение |
+| --- | --- |
+| Версия | 2.105.0 |
+| Путь | `C:\Users\a.skripkin\AppData\Local\Programs\gh\bin\gh.exe` |
+| PATH | добавлен в переменную пользователя (виден в новых терминалах) |
+| Авторизация | device flow, токен в Windows keyring |
+| Scopes | `repo`, `read:org`, `gist` |
+| Git-протокол | HTTPS, credential helper → `gh auth git-credential` |
+
+Полезные команды:
+
+```powershell
+gh auth status          # проверить вход
+gh repo view            # сведения о репозитории
+gh repo clone a-skripkin/anton-tech
+```
+
+Если токен истечёт: `gh auth login --hostname github.com --git-protocol https --web`.
+
+## SSL за корпоративным прокси
+
+Первый push упал с `self-signed certificate in certificate chain` — трафик перехватывает корпоративный прокси. Решение: git использует хранилище сертификатов Windows, где корневой сертификат компании уже доверенный.
+
+```powershell
+git config --global http.sslBackend schannel
+```
+
+Отключать проверку (`http.sslVerify false`) не нужно и небезопасно.
 
 ## Проверка после восстановления
 
