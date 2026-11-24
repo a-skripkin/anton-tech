@@ -8,7 +8,9 @@ import gettingStarted from '../../wiki/02-dev/getting-started.md?raw'
 import glossary from '../../wiki/00-meta/glossary.md?raw'
 import home from '../../wiki/README.md?raw'
 import logEntry from '../../wiki/04-logs/2026-11-23.md?raw'
+import logEntry24 from '../../wiki/04-logs/2026-11-24.md?raw'
 import logTemplate from '../../wiki/06-templates/log-entry.md?raw'
+import opencodeFallback from '../../wiki/02-dev/opencode-rate-limit-fallback.md?raw'
 import overview from '../../wiki/01-project/overview.md?raw'
 import recovery from '../../wiki/02-dev/recovery.md?raw'
 import stack from '../../wiki/01-project/stack.md?raw'
@@ -107,6 +109,13 @@ export const wikiPages: WikiPage[] = [
     content: recovery,
   },
   {
+    slug: 'opencode-rate-limit-fallback',
+    title: 'OpenCode: rate-limit fallback',
+    file: '02-dev/opencode-rate-limit-fallback.md',
+    group: 'Разработка',
+    content: opencodeFallback,
+  },
+  {
     slug: 'design',
     title: 'Дизайн-система',
     file: '03-design/ui-kit.md',
@@ -119,6 +128,13 @@ export const wikiPages: WikiPage[] = [
     file: '04-logs/2026-11-23.md',
     group: 'Журнал',
     content: logEntry,
+  },
+  {
+    slug: 'log-2026-11-24',
+    title: 'Журнал · 24.11.2026',
+    file: '04-logs/2026-11-24.md',
+    group: 'Журнал',
+    content: logEntry24,
   },
   {
     slug: 'adr-0001',

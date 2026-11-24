@@ -2,6 +2,18 @@
 
 Формат: [Keep a Changelog](https://keepachangelog.com/ru/1.1.0/), версии — [SemVer](https://semver.org/lang/ru/).
 
+## [Unreleased]
+
+### Добавлено
+
+- Инструкция [OpenCode: rate-limit fallback](02-dev/opencode-rate-limit-fallback.md): настройка `@azumag/opencode-rate-limit-fallback` v2, конфиг `opencode.jsonc` + `rate-limit-fallback.json`, режимы fallback, проверка `opencode models`, ориентиры по бесплатным/условно-бесплатным моделям (OpenCode, OpenRouter, Groq, Google AI Studio, GigaChat, YandexGPT, OrcaRouter), диагностика.
+- Журнал `04-logs/2026-11-24.md`: добавлена задача по настройке fallback и документированию в вики.
+
+### Изменено
+
+- Веб-вики: зарегистрирована страница «OpenCode: rate-limit fallback» в `src/wiki/config.ts`.
+- `wiki/README.md`: обновлены навигация, структура, счётчик (18 страниц), дата.
+
 ## [0.3.0] — 2026-11-23
 
 ### Добавлено
