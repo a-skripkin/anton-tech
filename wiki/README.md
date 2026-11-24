@@ -29,7 +29,8 @@
 | Dev URL | <http://localhost:5173/> |
 | Вики | <http://localhost:5173/#/wiki> |
 | Запуск | `.\start.ps1` |
-| Репозиторий | <https://github.com/a-skripkin/anton-tech> (private) |
+| Сайт | <https://a-skripkin.github.io/anton-tech/> |
+| Репозиторий | <https://github.com/a-skripkin/anton-tech> |
 | Сборка | `npm run build` — успешно |
 | Обновлено | 2026-11-24 |
 

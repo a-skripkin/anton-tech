@@ -2,8 +2,8 @@
 
 Страница-визитка разработчика: одностраничный сайт на Vite + React + TypeScript.
 
-**Демо:** <http://localhost:5173/> (после `npm run dev`)
-**Репозиторий:** <https://github.com/a-skripkin/anton-tech> (private)
+**Сайт:** <https://a-skripkin.github.io/anton-tech/>  
+**Репозиторий:** <https://github.com/a-skripkin/anton-tech>
 
 ## Запуск
 
@@ -29,7 +29,7 @@ npm run dev
 
 ## Документация
 
-Вся документация проекта — в [wiki/README.md](wiki/README.md), а также в браузере: <http://localhost:5173/#/wiki>.
+Вся документация проекта — в [wiki/README.md](wiki/README.md), а также на сайте: <https://a-skripkin.github.io/anton-tech/#/wiki>.
 
 - [О проекте](wiki/01-project/overview.md)
 - [Стек](wiki/01-project/stack.md)

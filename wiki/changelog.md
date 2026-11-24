@@ -7,12 +7,15 @@
 ### Добавлено
 
 - Инструкция [OpenCode: rate-limit fallback](02-dev/opencode-rate-limit-fallback.md): настройка `@azumag/opencode-rate-limit-fallback` v2, конфиг `opencode.jsonc` + `rate-limit-fallback.json`, режимы fallback, проверка `opencode models`, ориентиры по бесплатным/условно-бесплатным моделям (OpenCode, OpenRouter, Groq, Google AI Studio, GigaChat, YandexGPT, OrcaRouter), диагностика.
-- Журнал `04-logs/2026-11-24.md`: добавлена задача по настройке fallback и документированию в вики.
+- GitHub Pages: workflow `.github/workflows/deploy-pages.yml`, автодеплой `main` в <https://a-skripkin.github.io/anton-tech/>.
+- Журнал `04-logs/2026-11-24.md`: задачи по fallback и публикации на GitHub Pages.
 
 ### Изменено
 
+- Репозиторий `anton-tech` сделан публичным для включения GitHub Pages.
+- `vite.config.ts`: `base` для production-сборки — `/anton-tech/` (GitHub Pages project site).
 - Веб-вики: зарегистрирована страница «OpenCode: rate-limit fallback» в `src/wiki/config.ts`.
-- `wiki/README.md`: обновлены навигация, структура, счётчик (18 страниц), дата.
+- `wiki/README.md`: обновлены навигация, структура, счётчик (18 страниц), дата, ссылка на сайт.
 
 ## [0.3.0] — 2026-11-23
 
